@@ -12,13 +12,13 @@ import { Label } from "@/components/ui/label";
 import { CreditCard, DollarSign, Calendar, Percent } from "lucide-react";
 
 const EMICalculator = () => {
-  const [loanAmount, setLoanAmount] = useState < string > "1000000";
-  const [interestRate, setInterestRate] = useState < string > "9.5";
-  const [tenure, setTenure] = useState < string > "20";
+  const [loanAmount, setLoanAmount] = useState("1000000");
+  const [interestRate, setInterestRate] = useState("9.5");
+  const [tenure, setTenure] = useState("20");
 
   const calculateEMI = () => {
     const P = parseFloat(loanAmount);
-    const r = parseFloat(interestRate) / 100 / 12; // Monthly interest rate
+    const r = parseFloat(interestRate) / 100 / 12; // Monthly interest rat      e
     const n = parseFloat(tenure) * 12; // Number of months
 
     if (P <= 0 || r <= 0 || n <= 0)
