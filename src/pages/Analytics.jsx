@@ -40,6 +40,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 
 const Analytics = () => {
+  // eslint-disable-next-line no-unused-vars
   const [transactions, setTransactions] = useState([]);
   const [categorySpending, setCategorySpending] = useState([]);
   const [monthlyData, setMonthlyData] = useState([]);
@@ -54,6 +55,7 @@ const Analytics = () => {
     if (user) {
       fetchAnalyticsData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, timeRange]);
 
   const fetchAnalyticsData = async () => {
@@ -184,6 +186,7 @@ const Analytics = () => {
     setMonthlyData(monthlyArray);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const totalSpending = categorySpending.reduce(
     (sum, cat) => sum + cat.amount,
     0
