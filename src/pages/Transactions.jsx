@@ -63,7 +63,7 @@ const Transactions = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
-
+  
   const fetchTransactions = async () => {
     try {
       const { data, error } = await supabase
